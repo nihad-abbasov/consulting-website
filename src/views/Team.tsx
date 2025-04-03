@@ -1,7 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { motion } from "framer-motion";
 
 export function Team() {
   return (
@@ -23,7 +22,9 @@ export function Team() {
 
       {/* Leadership Team */}
       <section className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Leadership Team</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">
+          Leadership Team
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {leadershipTeam.map((member, index) => (
             <motion.div
@@ -82,10 +83,11 @@ export function Team() {
         >
           <h2 className="text-3xl font-bold mb-4">Join Our Team</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals to join our team of experts.
+            We're always looking for talented individuals to join our team of
+            experts.
           </p>
-          <a 
-            href="/careers" 
+          <a
+            href="/careers"
             className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
           >
             View Open Positions
@@ -98,37 +100,37 @@ export function Team() {
 
 const leadershipTeam = [
   {
-    name: 'John Smith',
-    role: 'CEO & Founder',
-    bio: '20+ years of experience in business consulting and strategy development.',
+    name: "John Smith",
+    role: "CEO & Founder",
+    bio: "20+ years of experience in business consulting and strategy development.",
   },
   {
-    name: 'Sarah Johnson',
-    role: 'Chief Strategy Officer',
-    bio: 'Expert in digital transformation and innovation strategy.',
+    name: "Sarah Johnson",
+    role: "Chief Strategy Officer",
+    bio: "Expert in digital transformation and innovation strategy.",
   },
   {
-    name: 'Michael Chen',
-    role: 'Head of Operations',
-    bio: 'Specializes in operational efficiency and process optimization.',
+    name: "Michael Chen",
+    role: "Head of Operations",
+    bio: "Specializes in operational efficiency and process optimization.",
   },
 ];
 
 const advisoryBoard = [
   {
-    name: 'David Wilson',
-    role: 'Former CEO, TechCorp',
+    name: "David Wilson",
+    role: "Former CEO, TechCorp",
   },
   {
-    name: 'Emily Brown',
-    role: 'Investment Partner, Growth Capital',
+    name: "Emily Brown",
+    role: "Investment Partner, Growth Capital",
   },
   {
-    name: 'Robert Lee',
-    role: 'Board Member, Global Enterprises',
+    name: "Robert Lee",
+    role: "Board Member, Global Enterprises",
   },
   {
-    name: 'Lisa Anderson',
-    role: 'Industry Expert, Innovation',
+    name: "Lisa Anderson",
+    role: "Industry Expert, Innovation",
   },
-]; 
+];
