@@ -128,8 +128,9 @@ const blogPosts = [
   }
 ];
 
-export default function BlogPostPage({ params }: { params: { id: string } }) {
-  const post = blogPosts.find(p => p.id === parseInt(params.id));
+export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  const post = blogPosts.find(p => p.id === parseInt(resolvedParams.id));
 
   if (!post) {
     notFound();
