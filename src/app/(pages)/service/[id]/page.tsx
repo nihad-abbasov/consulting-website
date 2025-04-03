@@ -92,8 +92,9 @@ const services = [
   }
 ];
 
-export default function ServicePage({ params }: { params: { id: string } }) {
-  const service = services.find(s => s.id === parseInt(params.id));
+export default async function ServicePage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  const service = services.find(s => s.id === parseInt(resolvedParams.id));
 
   if (!service) {
     notFound();
