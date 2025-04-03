@@ -78,7 +78,7 @@ export function About() {
           >
             <h3 className="text-xl font-semibold mb-4">Our Values</h3>
             <ul className="space-y-4">
-              {values.map((value, index) => (
+              {values.map((value) => (
                 <li key={value.title} className="flex items-start space-x-4">
                   <div
                     className={`w-12 h-12 rounded-full ${

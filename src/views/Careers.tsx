@@ -90,7 +90,7 @@ export function Careers() {
               At ConsultPro, we believe in fostering a culture of innovation, collaboration, and continuous learning. Our team members are encouraged to think creatively, share ideas, and grow both personally and professionally.
             </p>
             <p className="text-gray-600 dark:text-gray-400">
-              We value diversity and inclusion, and we're committed to creating an environment where everyone can thrive and contribute their unique perspectives.
+              We value diversity and inclusion, and we&apos;re committed to creating an environment where everyone can thrive and contribute their unique perspectives.
             </p>
           </motion.div>
           <motion.div

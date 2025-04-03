@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { useTheme } from 'next-themes';
-import { useState, useEffect } from 'react';
-import { BsArrowLeft, BsCalendar, BsTag } from 'react-icons/bs';
+import { BsArrowLeft, BsCalendar, BsTag } from "react-icons/bs";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import Link from "next/link";
 
 interface BlogDetailProps {
   post: {
@@ -42,7 +43,9 @@ export function BlogDetail({ post }: BlogDetailProps) {
         <Link
           href="/blog"
           className={`inline-flex items-center gap-2 ${
-            theme === 'dark' ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-500'
+            theme === "dark"
+              ? "text-blue-400 hover:text-blue-300"
+              : "text-blue-600 hover:text-blue-500"
           }`}
         >
           <BsArrowLeft />
@@ -59,30 +62,41 @@ export function BlogDetail({ post }: BlogDetailProps) {
           className="max-w-4xl mx-auto"
         >
           <div className="flex items-center gap-4 mb-6">
-            <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-              theme === 'dark' ? 'bg-blue-900 text-blue-300' : 'bg-blue-100 text-blue-600'
-            }`}>
+            <span
+              className={`px-3 py-1 rounded-full text-sm font-medium ${
+                theme === "dark"
+                  ? "bg-blue-900 text-blue-300"
+                  : "bg-blue-100 text-blue-600"
+              }`}
+            >
               {post.category}
             </span>
-            <div className={`flex items-center gap-2 ${
-              theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-            }`}>
+            <div
+              className={`flex items-center gap-2 ${
+                theme === "dark" ? "text-gray-400" : "text-gray-600"
+              }`}
+            >
               <BsCalendar />
               <span>{post.date}</span>
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">{post.title}</h1>
           <div className="flex items-center gap-4">
-            <img
+            <Image
               src={post.author.avatar}
               alt={post.author.name}
+              width={0}
+              height={0}
+              sizes="100vw"
               className="w-12 h-12 rounded-full"
             />
             <div>
               <div className="font-semibold">{post.author.name}</div>
-              <div className={`text-sm ${
-                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-              }`}>
+              <div
+                className={`text-sm ${
+                  theme === "dark" ? "text-gray-400" : "text-gray-600"
+                }`}
+              >
                 {post.author.role}
               </div>
             </div>
@@ -98,9 +112,12 @@ export function BlogDetail({ post }: BlogDetailProps) {
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto"
         >
-          <img
+          <Image
             src={post.imageUrl}
             alt={post.title}
+            width={0}
+            height={0}
+            sizes="100vw"
             className="w-full h-[400px] object-cover rounded-2xl"
           />
         </motion.div>
@@ -127,9 +144,11 @@ export function BlogDetail({ post }: BlogDetailProps) {
           className="max-w-4xl mx-auto"
         >
           <div className="flex items-center gap-2 mb-4">
-            <BsTag className={`${
-              theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-            }`} />
+            <BsTag
+              className={`${
+                theme === "dark" ? "text-gray-400" : "text-gray-600"
+              }`}
+            />
             <h3 className="text-lg font-semibold">Tags</h3>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -140,7 +159,9 @@ export function BlogDetail({ post }: BlogDetailProps) {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 className={`px-3 py-1 rounded-full text-sm ${
-                  theme === 'dark' ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+                  theme === "dark"
+                    ? "bg-gray-800 text-gray-300"
+                    : "bg-gray-100 text-gray-700"
                 }`}
               >
                 {tag}
@@ -151,4 +172,4 @@ export function BlogDetail({ post }: BlogDetailProps) {
       </section>
     </div>
   );
-} 
+}

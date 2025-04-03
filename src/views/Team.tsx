@@ -83,8 +83,8 @@ export function Team() {
         >
           <h2 className="text-3xl font-bold mb-4">Join Our Team</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals to join our team of
-            experts.
+            We&apos;re always looking for talented individuals to join our team
+            of experts.
           </p>
           <a
             href="/careers"

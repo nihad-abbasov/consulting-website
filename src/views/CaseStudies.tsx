@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function CaseStudies() {
   return (
@@ -16,7 +16,7 @@ export function CaseStudies() {
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Case Studies</h1>
           <p className="text-xl text-gray-600 dark:text-gray-400">
-            Discover how we've helped businesses achieve remarkable results
+            Discover how we&apos;ve helped businesses achieve remarkable results
           </p>
         </motion.div>
       </section>
@@ -39,7 +39,9 @@ export function CaseStudies() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{study.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">{study.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  {study.description}
+                </p>
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
                     <span className="font-semibold mr-2">Industry:</span>
@@ -50,13 +52,23 @@ export function CaseStudies() {
                     {study.results}
                   </div>
                 </div>
-                <Link 
+                <Link
                   href={`/case-studies/${study.slug}`}
                   className="inline-flex items-center text-blue-600 hover:text-blue-700"
                 >
                   Read more
-                  <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  <svg
+                    className="w-4 h-4 ml-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                 </Link>
               </div>
@@ -73,12 +85,15 @@ export function CaseStudies() {
           transition={{ duration: 0.5 }}
           className="bg-blue-600 rounded-lg p-8 md:p-12 text-center text-white"
         >
-          <h2 className="text-3xl font-bold mb-4">Ready to Create Your Success Story?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Create Your Success Story?
+          </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Let's work together to achieve remarkable results for your business.
+            Let&apos;s work together to achieve remarkable results for your
+            business.
           </p>
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
           >
             Start Your Journey
@@ -91,45 +106,51 @@ export function CaseStudies() {
 
 const caseStudies = [
   {
-    title: 'Digital Transformation Success',
-    description: 'How we helped a traditional retail business embrace digital innovation and increase online sales by 200%.',
-    industry: 'Retail',
-    results: '200% increase in online sales',
-    slug: 'digital-transformation-success',
+    title: "Digital Transformation Success",
+    description:
+      "How we helped a traditional retail business embrace digital innovation and increase online sales by 200%.",
+    industry: "Retail",
+    results: "200% increase in online sales",
+    slug: "digital-transformation-success",
   },
   {
-    title: 'Operational Excellence',
-    description: 'Streamlining operations and reducing costs by 30% for a manufacturing company.',
-    industry: 'Manufacturing',
-    results: '30% cost reduction',
-    slug: 'operational-excellence',
+    title: "Operational Excellence",
+    description:
+      "Streamlining operations and reducing costs by 30% for a manufacturing company.",
+    industry: "Manufacturing",
+    results: "30% cost reduction",
+    slug: "operational-excellence",
   },
   {
-    title: 'Market Expansion Strategy',
-    description: 'Guiding a tech startup through successful international expansion.',
-    industry: 'Technology',
-    results: 'Expanded to 5 new markets',
-    slug: 'market-expansion-strategy',
+    title: "Market Expansion Strategy",
+    description:
+      "Guiding a tech startup through successful international expansion.",
+    industry: "Technology",
+    results: "Expanded to 5 new markets",
+    slug: "market-expansion-strategy",
   },
   {
-    title: 'Financial Turnaround',
-    description: 'Helping a struggling company achieve financial stability and growth.',
-    industry: 'Finance',
-    results: '40% revenue growth',
-    slug: 'financial-turnaround',
+    title: "Financial Turnaround",
+    description:
+      "Helping a struggling company achieve financial stability and growth.",
+    industry: "Finance",
+    results: "40% revenue growth",
+    slug: "financial-turnaround",
   },
   {
-    title: 'Customer Experience Enhancement',
-    description: 'Improving customer satisfaction scores by 50% through strategic initiatives.',
-    industry: 'Service',
-    results: '50% increase in satisfaction',
-    slug: 'customer-experience-enhancement',
+    title: "Customer Experience Enhancement",
+    description:
+      "Improving customer satisfaction scores by 50% through strategic initiatives.",
+    industry: "Service",
+    results: "50% increase in satisfaction",
+    slug: "customer-experience-enhancement",
   },
   {
-    title: 'Supply Chain Optimization',
-    description: 'Optimizing supply chain operations for improved efficiency and reduced costs.',
-    industry: 'Logistics',
-    results: '25% efficiency improvement',
-    slug: 'supply-chain-optimization',
+    title: "Supply Chain Optimization",
+    description:
+      "Optimizing supply chain operations for improved efficiency and reduced costs.",
+    industry: "Logistics",
+    results: "25% efficiency improvement",
+    slug: "supply-chain-optimization",
   },
-]; 
+];

@@ -4,6 +4,7 @@ import { BsArrowRight, BsCalendar } from "react-icons/bs";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import Link from "next/link";
 
 interface Article {
@@ -121,9 +122,12 @@ export function Blog() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="relative h-[400px] md:h-auto">
-              <img
+              <Image
                 src={featuredArticle.imageUrl}
                 alt={featuredArticle.title}
+                width={0}
+                height={0}
+                sizes="100vw"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -158,9 +162,12 @@ export function Blog() {
                 {featuredArticle.excerpt}
               </p>
               <div className="flex items-center gap-4 mb-6">
-                <img
+                <Image
                   src={featuredArticle.author.avatar}
                   alt={featuredArticle.author.name}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
                   className="w-12 h-12 rounded-full"
                 />
                 <div>
@@ -206,9 +213,12 @@ export function Blog() {
               }`}
             >
               <div className="relative h-48">
-                <img
+                <Image
                   src={article.imageUrl}
                   alt={article.title}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -241,9 +251,12 @@ export function Blog() {
                   {article.excerpt}
                 </p>
                 <div className="flex items-center gap-4 mb-4">
-                  <img
+                  <Image
                     src={article.author.avatar}
                     alt={article.author.name}
+                    width={0}
+                    height={0}
+                    sizes="100vw"
                     className="w-10 h-10 rounded-full"
                   />
                   <div>
