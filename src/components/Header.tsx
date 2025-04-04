@@ -55,9 +55,8 @@ export function Header() {
   }
 
   return (
-    <header className={`fixed w-full z-50 ${
-      theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
-    }`}>
+    <header className={`fixed w-full z-50 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
+      }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -67,29 +66,24 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/about" className={`hover:${
-              theme === 'dark' ? 'text-blue-400' : 'text-blue-600'
-            }`}>
+            <Link href="/about" className={`hover:${theme === 'dark' ? 'text-blue-400' : 'text-blue-600'
+              }`}>
               About
             </Link>
-            <Link href="/services" className={`hover:${
-              theme === 'dark' ? 'text-blue-400' : 'text-blue-600'
-            }`}>
+            <Link href="/services" className={`hover:${theme === 'dark' ? 'text-blue-400' : 'text-blue-600'
+              }`}>
               Services
             </Link>
-            <Link href="/team" className={`hover:${
-              theme === 'dark' ? 'text-blue-400' : 'text-blue-600'
-            }`}>
+            <Link href="/team" className={`hover:${theme === 'dark' ? 'text-blue-400' : 'text-blue-600'
+              }`}>
               Team
             </Link>
-            <Link href="/blog" className={`hover:${
-              theme === 'dark' ? 'text-blue-400' : 'text-blue-600'
-            }`}>
+            <Link href="/blog" className={`hover:${theme === 'dark' ? 'text-blue-400' : 'text-blue-600'
+              }`}>
               Blog
             </Link>
-            <Link href="/contact" className={`hover:${
-              theme === 'dark' ? 'text-blue-400' : 'text-blue-600'
-            }`}>
+            <Link href="/contact" className={`hover:${theme === 'dark' ? 'text-blue-400' : 'text-blue-600'
+              }`}>
               Contact
             </Link>
           </nav>
@@ -98,9 +92,8 @@ export function Header() {
           <div className="flex items-center space-x-4">
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className={`p-2 rounded-lg ${
-                theme === 'dark' ? 'hover:bg-gray-800' : 'hover:bg-gray-100'
-              }`}
+              className={`p-2 rounded-lg cursor-pointer ${theme === 'dark' ? 'hover:bg-gray-800' : 'hover:bg-gray-100'
+                }`}
             >
               {theme === 'dark' ? <BsSun size={20} /> : <BsMoon size={20} />}
             </button>
@@ -134,17 +127,15 @@ export function Header() {
                 animate="open"
                 exit="closed"
                 variants={menuVariants}
-                className={`fixed top-0 right-0 h-full w-64 ${
-                  theme === 'dark' ? 'bg-gray-900' : 'bg-white'
-                } shadow-xl md:hidden`}
+                className={`fixed top-0 right-0 h-full w-64 ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'
+                  } shadow-xl md:hidden`}
               >
                 {/* Close Button */}
                 <div className="flex justify-end p-4">
                   <motion.button
                     onClick={toggleMenu}
-                    className={`p-2 rounded-full ${
-                      theme === 'dark' ? 'hover:bg-gray-800' : 'hover:bg-gray-100'
-                    }`}
+                    className={`p-2 rounded-full ${theme === 'dark' ? 'hover:bg-gray-800' : 'hover:bg-gray-100'
+                      }`}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -171,9 +162,8 @@ export function Header() {
                       >
                         <Link
                           href={item.href}
-                          className={`block text-lg font-medium ${
-                            theme === 'dark' ? 'hover:text-blue-400' : 'hover:text-blue-600'
-                          }`}
+                          className={`block text-lg font-medium ${theme === 'dark' ? 'hover:text-blue-400' : 'hover:text-blue-600'
+                            }`}
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {item.label}
