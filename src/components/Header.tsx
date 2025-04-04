@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { BsMoon, BsSun, BsList, BsX } from 'react-icons/bs';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Logo } from './Logo';
 
 export function Header() {
   const [mounted, setMounted] = useState(false);
@@ -61,7 +62,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="text-xl font-bold">
-            ConsultPro
+            <Logo />
           </Link>
 
           {/* Desktop Navigation */}
